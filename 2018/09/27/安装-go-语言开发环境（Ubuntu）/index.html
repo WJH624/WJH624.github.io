@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Ubuntu,Go,开发环境," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Note" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="keywords" content="Ubuntu,Go,开发环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装 go 语言开发环境（Ubuntu）">
+<meta property="og:url" content="http://wjh624.github.io/2018/09/27/安装-go-语言开发环境（Ubuntu）/index.html">
+<meta property="og:site_name" content="Note">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-30T16:32:46.722Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装 go 语言开发环境（Ubuntu）">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wjh624.github.io/2018/09/27/安装-go-语言开发环境（Ubuntu）/"/>
+
+
+
+
+
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+  <title>安装 go 语言开发环境（Ubuntu） | Note</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <a href="https://github.com/wjh624" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Stay Hungry, Stay Foolish</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wjh624.github.io/2018/09/27/安装-go-语言开发环境（Ubuntu）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wjh624">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">安装 go 语言开发环境（Ubuntu）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T13:05:51+08:00">
+                2018-09-27
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-01T00:32:46+08:00">
+                2018-10-01
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Service-Computing/" itemprop="url" rel="index">
+                    <span itemprop="name">Service Computing</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/27/安装-go-语言开发环境（Ubuntu）/" class="leancloud_visitors" data-flag-title="安装 go 语言开发环境（Ubuntu）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<blockquote class="blockquote-center">Table of Contents</blockquote> 
+<p><ul class="markdownIt-TOC">
+<li><a href="#1-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8vscode">1、安装编辑器（VSCode）</a></li>
+<li><a href="#2-%E5%AE%89%E8%A3%85-golang">2、安装 golang</a></li>
+<li><a href="#3-%E9%85%8D%E7%BD%AE-go-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">3、配置 Go 环境变量</a></li>
+<li><a href="#4-%E8%BF%90%E8%A1%8C%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F">4、运行你的第一个程序</a></li>
+<li><a href="#5-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-github-%E5%81%9A-go-%E5%B7%A5%E4%BD%9C%E5%8C%BA-%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6">5、如何使用 Github 做 Go 工作区 的版本控制</a></li>
+<li><a href="#6-%E4%B8%AD%E9%80%94%E5%87%BA%E7%8E%B0%E8%BF%87%E7%9A%84-bug">6、中途出现过的 Bug</a></li>
+<li><a href="#7-reflect">7、Reflect</a></li>
+</ul>
+</p>
+<p><strong>环境： Ubuntu 16.04 LTS 64bit</strong></p>
+<h2 id="1-安装编辑器vscode"><a class="markdownIt-Anchor" href="#1-安装编辑器vscode"></a> 1、安装编辑器（VSCode）</h2>
+<p>说明：编辑器更具个人喜好选择，这里只是尝试一下 VSCode 的使用</p>
+<p><a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="noopener">官方说明：Running VS Code on Linux</a></p>
+<ol>
+<li>
+<p><a href="https://go.microsoft.com/fwlink/?LinkID=760868" target="_blank" rel="noopener">下载 deb包</a></p>
+</li>
+<li>
+<p>定位到安装包到目录并执行如下命令（这里不做解释了）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i &lt;file&gt;.deb</span><br><span class="line">sudo apt-get install -f <span class="comment"># Install dependencies</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="2-安装-golang"><a class="markdownIt-Anchor" href="#2-安装-golang"></a> 2、安装 golang</h2>
+<p>说明：这里之前是参照了一些老师的指导，但是安装的有问题，建议多在网上找找，把思路看再行动，以下是曲折的尝试过程，建议看完再行动</p>
+<p>借鉴感谢</p>
+<p><a href="https://www.jianshu.com/p/5c71a088e6eb" target="_blank" rel="noopener">Linux系统编译安装Go1.9.2</a></p>
+<ol>
+<li>
+<p><a href="https://golang.org/" target="_blank" rel="noopener">官网</a> <a href="https://golang.org/doc/install?download=go1.11.linux-amd64.tar.gz" target="_blank" rel="noopener">下载安装包 go1.11.linux-amd64.tar.gz</a></p>
+</li>
+<li>
+<p>定位到安装包到目录并执行如下命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzf go1.<span class="number">8</span>.linux-amd64.tar.gz  -C /usr/local</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>这里要格外注意到这里并没有安装完，只是解压到文件 /usr/local 下，还需要手动进行编译安装（如果没有编译后面还会出现 GOARCH 参数不对等各种问题）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/go/src <span class="comment"># src 是存放安装脚本的目录</span></span><br><span class="line">sudo ./make.bash <span class="comment"># 执行自带的安装脚本</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>执行后发现报错</p>
+<p>![](/home/zero/Desktop/Transfer station/Image/Go/go_install_bug3.png)</p>
+<p><strong>Why</strong></p>
+<p>编译GO 1.6版本以上的需要依赖GO 1.4版本的二进制，于是要先编译安装1.4版本</p>
+<p><strong>Solve</strong></p>
+<p>先到 Go 的 github 上下载 <a href="https://github.com/golang/go" target="_blank" rel="noopener">GO 的历代版本包</a>，然后将<strong>分支切换到 go1.4</strong>，之后执行如下命令进行安装</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /go</span><br><span class="line">git checkout go1.<span class="number">4</span></span><br><span class="line">cd /src</span><br><span class="line">sudo ./all.bash</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>执行出现如下错误</p>
+<p>![](/home/zero/Desktop/Transfer station/Image/Go/go1.4_install_bug.png)</p>
+<p><strong>Why</strong></p>
+<blockquote>
+<p>导致上述问题的原因是：CGO_ENABLED: Controls cgo usage during the build. Set it to 1 to include all cgo related files, .c and .go file with “cgo” build directive, in the build. Set it to 0 to ignore them.</p>
+<p>在构建过程中控制 cgo 的使用。当设置为1，在构建时，会包含所有 cgo 相关的文件，如带有 ”cgo” 编译指令的 .c 和 .go 文件。当设置为0，则忽略它们（即禁用 CGO）</p>
+</blockquote>
+<p><strong>Solve</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /go/src</span><br><span class="line">sudo CGO_ENABLED=<span class="number">0</span> ./make.bash</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>重复执行之前第4步安装命令，Go1.4 安装成功</p>
+<p>![go1.4_install_success](/home/zero/Desktop/Transfer station/Image/Go/go1.4_install_success.png)</p>
+</li>
+<li>
+<p>重新执行之前第3步安装命令，Go1.9.1 安装成功，<strong>所以正确的步骤是5423</strong></p>
+</li>
+</ol>
+<h2 id="3-配置-go-环境变量"><a class="markdownIt-Anchor" href="#3-配置-go-环境变量"></a> 3、配置 Go 环境变量</h2>
+<p>说明：这里需要2个知识点 -&gt; Ubuntu 下配置文件 .profile .bashrc 等、环境变量访问，需要上网查阅完整知识，这里只解释相关步骤</p>
+<p><strong>~/.bashrc 和 ~/.profile 一些理解</strong></p>
+<ul>
+<li>
+<p>都是当前用户的配置文件，只在当前用户下产生作用</p>
+</li>
+<li>
+<p>profile 只在登录系统时执行一次，而 bashrc 在每次打开终端的时候都会执行</p>
+</li>
+<li>
+<p>如果想要更改后的 profile 产生作用，第一种是重新登录，第二种是 source ~/.profile，但是这个只对当前终端产生作用，在打开新的终端中 profile 的更改无效</p>
+</li>
+<li>
+<p><strong>不知道为什么感觉，每次重新登录后，对 profile 的所有更改都无效，必须每次执行 source 才会有效</strong></p>
+</li>
+</ul>
+<ol>
+<li>
+<p>~/.profile 文件的修改，执行以下命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.profile</span><br><span class="line">// 文件末尾添加以下内容</span><br><span class="line">export GOPATH=<span class="variable">$HOME</span>/gowork </span><br><span class="line"><span class="comment"># GOPATH 表示 Go 的工作目录，是存放源代码，库等东西的地方，可以有多个GOPATH</span></span><br><span class="line">export PATH=<span class="variable">$PATH:</span><span class="variable">$GOPATH</span>/bin</span><br><span class="line"><span class="comment"># PATH 需要用 $PATH: 继承其他地方的 PATH 目录，不然后果很惨</span></span><br><span class="line">export GOBIN=<span class="variable">$GOPATH</span>/bin</span><br><span class="line"><span class="comment"># GOBIN 是存放，执行 go install 执命令后产生的可执行文件的地方</span></span><br></pre></td></tr></table></figure>
+<p>以上解释详见</p>
+</li>
+<li>
+<p>重新记载<code>profile</code></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>检查配置，执行 go env，注意 GOPATH GOBIN GOARCH</p>
+<p>![go_env](/home/zero/Desktop/Transfer station/Image/Go/go_env.png)</p>
+</li>
+</ol>
+<h2 id="4-运行你的第一个程序"><a class="markdownIt-Anchor" href="#4-运行你的第一个程序"></a> 4、运行你的第一个程序</h2>
+<p>说明：请先阅读官方文档，<a href="https://go-zh.org/doc/code.html" target="_blank" rel="noopener">如何使用 Go 编程</a>，以下内容全部参照官方文档，只对其中部分内容做展示，见第5部分</p>
+<h2 id="5-如何使用-github-做-go-工作区-的版本控制"><a class="markdownIt-Anchor" href="#5-如何使用-github-做-go-工作区-的版本控制"></a> 5、如何使用 Github 做 Go 工作区 的版本控制</h2>
+<p>说明：在第4部分中，我们创建的源代码库目录是 $GOPATH/src/github.com/user/hello，会发现目录结构和 github 网站结构大致相同</p>
+<ol>
+<li>
+<p>创建一个源代码库 Go</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="variable">$GOPATH</span>/src/github.com/user/Go</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>创建 hello.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim hello.<span class="keyword">go</span></span><br><span class="line"># 输入以下内容</span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Printf(<span class="string">"Hello go in github!\n"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>编译运行 go install</p>
+<p>说明：go install 后如果不加文件名，会执行当前目录下所有 go 源码文件，执行后会在 $GOPATH 目录中生成可执行文件 hello，<strong>如果出现问题，请检查 $GOPATH  目录是否正确，可以访问</strong></p>
+</li>
+<li>
+<p>执行 hello 查看结果，<strong>这里可能会出现问题，因为无法复制问题没有图片，原因可能是 Ubuntu 终端下有一个命令是 hello，会输出 Hello world!，直接执行 hello 终端可能会认为你访问你个未安装的指令</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$GOBIN</span>/hello</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在 github 网站上创建仓库 Go</p>
+<p>![go_github](/home/zero/Desktop/Transfer station/Image/Go/go_github.png)</p>
+</li>
+<li>
+<p>终端下执行如下命令，连接到远程 github 仓库</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"# Go"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/wjh624/Go.git <span class="comment"># 此处是你的 SSH 的内容</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>输入用户名和密码 OK</p>
+</li>
+</ol>
+<h2 id="6-中途出现过的-bug"><a class="markdownIt-Anchor" href="#6-中途出现过的-bug"></a> 6、中途出现过的 Bug</h2>
+<p>说明：此处文本介绍，方便 Bug 问题搜索</p>
+<p><strong>1、go intall: cannot install cross-compiled binaries when GOBIN is set</strong></p>
+<p>![go_install_bug](/home/zero/Desktop/Transfer station/Image/Go/go_install_bug.png)</p>
+<p>**When: ** 执行 go install 编译 hello.go</p>
+<p>**Why: ** 在网上一直没找到相关问题的解决，按照翻译的中文，交叉编译问题查找，发现 Go 语言是可以实现交叉编译的（比如 linux 下运行 win go 文件），但是我运行的一直是 linux 下的啊，猜测是 <strong>$GOARCH=386  参数错误</strong>，为什么这个参数会错误呢，因为之前并没有完全安装和 Go 导致的（只是简单拷贝到目录，没有运行安装脚本），由此可见每一步都是有理由的，每一步都需谨慎，每一步都尽量保证可逆，每一个 Bug 出现都是有原因的啊，找到它</p>
+<p>![goarch](/home/zero/Desktop/Transfer station/Image/Go/goarch.png)</p>
+<p>**Solve:**改成 $GOARCH=amd64</p>
+<p>**2、open /usr/local/go/bin/hello: permisson denied **</p>
+<p>![go_install_bug2](/home/zero/Desktop/Transfer station/Image/Go/go_install_bug2.png)</p>
+<p><strong>When :</strong> 执行 go install 编译 hello.go</p>
+<p><strong>Why :</strong> 后来查资料的时候知道了 go intall 会在 bin 目录下生成可执行文件，这里显然就是 bin 目录无法访问，怎么能无法访问呢，花了好长时间才知道 $GOBIN 的目录错了，为什么会出现这个错误呢，因为之前安装 golong，看博客上配置 .bashrc，加了一堆内容，自己也没仔细搞懂，就加上了，哎还是那句话，弄懂每一步，记录每一步，每一个 bug 必定有前因后果，弄懂原理</p>
+<p>**Solve: ** 去掉 .bashrc 文件中的之前添加的内容，配置的更改主要放在 profile 中</p>
+<h2 id="7-reflect"><a class="markdownIt-Anchor" href="#7-reflect"></a> 7、Reflect</h2>
+<p>一路曲折，问题很多，花了很长时间，但是好歹独立完成了</p>
+<p>其实上面绝大部分问题都是可以避免的，或者说仔细想想很好解决的，花了很长时间的原因在于，我不是真正理解或者完全理解网络上博客那些步骤的意思，那些命令的意思，只是照猫画瓢，以至于后面会因为前面的纰漏出现很多问题，所以再给自己强调一下，每一步都要弄懂，每一步都要记录下来，每一步都要考虑可能后果，每一步尽量可逆，每一步都要谨慎啊（这里突然想到德润老板之前网上教我安装 Ubuntu 系统的时候，每一步都标号标出，甚至每一步不厌花时间给我讲清楚原理，是多么有用，很感谢）如果我能把那样方式用在这里也就不会出现这些问题了</p>
+<p>还有比较致命的一点，<strong>当出现问题时总是想着网上搜索如何解决它，不是，我应该先想问题为什么会出现</strong>，只有明白出现的前因后果，才是懂得原理，才能更好的解决</p>
+<p>还是每一步弄明白，尽可能了解相关知识后，再确认执行</p>
+<p>这次过程中遇到的 Bug 还好都及时记下了，写的多了，下次会尽量精简吧</p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center; color: #00CD00; font-size:14px;
+        ">------------------------------------------ The End ------------------------------------------</div>
+    
+</div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Go/" rel="tag"># Go</a>
+          
+            <a href="/tags/开发环境/" rel="tag"># 开发环境</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/14/使用-VirtualBox-让-PC-提供云桌面服务/" rel="next" title="使用 VirtualBox 让 PC 提供云桌面服务">
+                <i class="fa fa-chevron-left"></i> 使用 VirtualBox 让 PC 提供云桌面服务
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">wjh624</p>
+              <p class="site-description motion-element" itemprop="description">主要涉及编程和阅读</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/wjh624" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://me.csdn.net/hz2217" target="_blank" title="Csdn">
+                      
+                        <i class="fa fa-fw fa-copyright"></i>Csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangjh624@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装编辑器vscode"><span class="nav-number">1.</span> <span class="nav-text"> 1、安装编辑器（VSCode）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装-golang"><span class="nav-number">2.</span> <span class="nav-text"> 2、安装 golang</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置-go-环境变量"><span class="nav-number">3.</span> <span class="nav-text"> 3、配置 Go 环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-运行你的第一个程序"><span class="nav-number">4.</span> <span class="nav-text"> 4、运行你的第一个程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-如何使用-github-做-go-工作区-的版本控制"><span class="nav-number">5.</span> <span class="nav-text"> 5、如何使用 Github 做 Go 工作区 的版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-中途出现过的-bug"><span class="nav-number">6.</span> <span class="nav-text"> 6、中途出现过的 Bug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-reflect"><span class="nav-number">7.</span> <span class="nav-text"> 7、Reflect</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wjh624</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共3.4k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("jP3QMIalg7LIExAaqaYDsspP-gzGzoHsz", "eNgVuLwHU8MajrLWb2nXr2FP");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
