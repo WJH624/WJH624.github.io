@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wjh624.github.io/"/>
-  <updated>2018-10-11T15:10:59.502Z</updated>
+  <updated>2018-10-12T12:27:14.000Z</updated>
   <id>http://wjh624.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://wjh624.github.io/2018/10/11/Linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AD%A6%E4%B9%A0/"/>
     <id>http://wjh624.github.io/2018/10/11/Linux-命令行学习/</id>
     <published>2018-10-11T14:32:16.000Z</published>
-    <updated>2018-10-11T15:10:59.502Z</updated>
+    <updated>2018-10-12T12:27:14.000Z</updated>
     
-    <content type="html"><![CDATA[<p>不断积累 Linux 命令</p><a id="more"></a><p><strong>环境： Ubuntu 16.04 LTS 64bit</strong></p><h2 id="主机操作"><a class="markdownIt-Anchor" href="#主机操作"></a> 主机操作</h2><ul><li>关机：<code>shutdown -h now/halt</code></li><li>重启：<code>reboot</code></li><li>获取root权限：<code>sudo su</code></li></ul><h2 id="文件与文件夹操作"><a class="markdownIt-Anchor" href="#文件与文件夹操作"></a> 文件与文件夹操作</h2><ul><li><p>重命名：<code>mv oldname newname</code></p></li><li><p>拷贝文件夹：<code>cp -a filename newfilename</code></p></li><li><p>打开PDF文件：<code>evince filename</code></p></li></ul><h2 id="查找"><a class="markdownIt-Anchor" href="#查找"></a> 查找</h2><ul><li>查找含有某字符串的所有文件：<code>grep -rn &quot;hello, world!&quot; *</code></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>不断积累 Linux 命令</p><a id="more"></a><p><strong>环境： Ubuntu 16.04 LTS 64bit</strong></p><h2 id="主机操作"><a class="markdownIt-Anchor" href="#主机操作"></a> 主机操作</h2><ul><li>关机：<code>shutdown -h now/halt</code></li><li>重启：<code>reboot</code></li><li>获取root权限：<code>sudo su</code></li></ul><h2 id="文件与文件夹操作"><a class="markdownIt-Anchor" href="#文件与文件夹操作"></a> 文件与文件夹操作</h2><ul><li>重命名：<code>mv oldname newname</code></li><li>拷贝文件夹：<code>cp -a filename newfilename</code></li><li>打开PDF文件：<code>evince filename</code></li><li>移动同属性的文件：<code>mv *.png ./image</code></li></ul><h2 id="查找"><a class="markdownIt-Anchor" href="#查找"></a> 查找</h2><ul><li>查找含有某字符串的所有文件：<code>grep -rn &quot;hello, world!&quot; *</code></li></ul>]]></content>
     
     <summary type="html">
     
@@ -109,9 +109,9 @@
     <link href="http://wjh624.github.io/2018/09/13/%E5%AE%8C%E5%85%A8%E9%94%AE%E7%9B%98%E6%B5%81/"/>
     <id>http://wjh624.github.io/2018/09/13/完全键盘流/</id>
     <published>2018-09-13T09:41:31.000Z</published>
-    <updated>2018-10-11T14:36:00.811Z</updated>
+    <updated>2018-10-12T13:40:03.460Z</updated>
     
-    <content type="html"><![CDATA[<p>纯粹让手指在键盘上飞舞，像弹钢琴一样流畅</p><a id="more"></a><h2 id="step1-从盲打开始"><a class="markdownIt-Anchor" href="#step1-从盲打开始"></a> Step1 - 从盲打开始</h2><h2 id="step2-学习linux命令行"><a class="markdownIt-Anchor" href="#step2-学习linux命令行"></a> Step2 - 学习linux命令行</h2>]]></content>
+    <content type="html"><![CDATA[<p>纯粹让手指在键盘上飞舞，像弹钢琴一样流畅</p><a id="more"></a><h2 id="step1-从盲打开始"><a class="markdownIt-Anchor" href="#step1-从盲打开始"></a> Step1 - 从盲打开始</h2><h2 id="step2-学习linux命令行"><a class="markdownIt-Anchor" href="#step2-学习linux命令行"></a> Step2 - 学习linux命令行</h2><h2 id="step3-vimiumyou-will-like-it"><a class="markdownIt-Anchor" href="#step3-vimiumyou-will-like-it"></a> Step3 - vimium（you will like it）</h2>]]></content>
     
     <summary type="html">
     
