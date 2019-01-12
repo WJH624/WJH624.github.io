@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://wjh624.github.io/2018/09/27/安装-go-语言开发环境（Ubuntu）/index.html">
 <meta property="og:site_name" content="Zero&#39;s note">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-12T11:51:25.687Z">
+<meta property="og:updated_time" content="2019-01-12T15:47:39.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装 go 语言开发环境（Ubuntu）">
 
@@ -104,7 +104,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -316,7 +316,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-12T19:51:25+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-12T23:47:39+08:00">
                 2019-01-12
               </time>
             
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Service-Computing/" itemprop="url" rel="index">
-                    <span itemprop="name">Service Computing</span>
+                  <a href="/categories/软件安装与环境配置/" itemprop="url" rel="index">
+                    <span itemprop="name">软件安装与环境配置</span>
                   </a>
                 </span>
 
@@ -377,7 +377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.2k
+                  877
                 </span>
               
 
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  3
                 </span>
               
             </div>
@@ -416,147 +416,29 @@
       
         <hr>
 <a id="more"></a>
-<p><strong>Ubuntu 16.04 LTS 64bit</strong></p>
-<blockquote class="blockquote-center">Table of Contents</blockquote> 
-<p><strong>安装golang1.4</strong></p>
+<p>Ubuntu 16.04 LTS 64bit</p>
+<h2 id="安装golang14"><a class="markdownIt-Anchor" href="#安装golang14"></a> 安装golang1.4</h2>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">4</span>-bootstrap-<span class="number">20170531</span>.tar.gz  </span><br><span class="line">tar -xf go1.<span class="number">4</span>-bootstrap-<span class="number">20170531</span>.tar.gz  </span><br><span class="line">cd go/src  </span><br><span class="line">./make.bash</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 成功后信息  </span></span><br><span class="line"><span class="comment"># Installed Go for linux/amd64 in /home/test/go  </span></span><br><span class="line"><span class="comment"># Installed commands in /home/test/go/bin  </span></span><br><span class="line">cd ~/  </span><br><span class="line">mv go go1.<span class="number">4</span></span><br></pre></td></tr></table></figure>
-<p><strong>安装golang1.9</strong></p>
+<h2 id="安装golang19"><a class="markdownIt-Anchor" href="#安装golang19"></a> 安装golang1.9</h2>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">9</span>.src.tar.gz  </span><br><span class="line">tar -xf go1.<span class="number">9</span>.src.tar.gz  </span><br><span class="line">cd go/src</span><br><span class="line">./all.bash  </span><br><span class="line"></span><br><span class="line">cd ~/</span><br><span class="line">mv go /usr/local/go1.<span class="number">9</span></span><br><span class="line">mkdir -p gowork/src gowork/bin gowork/pkg</span><br><span class="line">sudo subl /etc/profile</span><br><span class="line"><span class="comment"># 文末添加一下内容</span></span><br><span class="line">export GOROOT=/usr/local/go1.<span class="number">9</span></span><br><span class="line">export GOPATH=<span class="variable">$HOME</span>/gowork</span><br><span class="line">export PATH=<span class="variable">$PATH:</span>/usr/local/go1.<span class="number">9</span>/bin</span><br><span class="line">source /etc/profile</span><br><span class="line">go version</span><br></pre></td></tr></table></figure>
-<h2 id="1-安装编辑器vscode"><a class="markdownIt-Anchor" href="#1-安装编辑器vscode"></a> 1、安装编辑器（VSCode）</h2>
-<p>说明：编辑器更具个人喜好选择，这里只是尝试一下 VSCode 的使用</p>
-<p><a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="noopener">官方说明：Running VS Code on Linux</a></p>
-<ol>
-<li>
-<p><a href="https://go.microsoft.com/fwlink/?LinkID=760868" target="_blank" rel="noopener">下载 deb包</a></p>
-</li>
-<li>
-<p>定位到安装包到目录并执行如下命令（这里不做解释了）</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i &lt;file&gt;.deb</span><br><span class="line">sudo apt-get install -f <span class="comment"># Install dependencies</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="2-安装-golang"><a class="markdownIt-Anchor" href="#2-安装-golang"></a> 2、安装 golang</h2>
-<p>说明：这里之前是参照了一些老师的指导，但是安装的有问题，建议多在网上找找，把思路看再行动，以下是曲折的尝试过程，建议看完再行动</p>
-<p>借鉴感谢</p>
-<p><a href="https://www.jianshu.com/p/5c71a088e6eb" target="_blank" rel="noopener">Linux系统编译安装Go1.9.2</a></p>
-<ol>
-<li>
-<p><a href="https://golang.org/" target="_blank" rel="noopener">官网</a> <a href="https://golang.org/doc/install?download=go1.11.linux-amd64.tar.gz" target="_blank" rel="noopener">下载安装包 go1.11.linux-amd64.tar.gz</a></p>
-</li>
-<li>
-<p>定位到安装包到目录并执行如下命令</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzf go1.<span class="number">8</span>.linux-amd64.tar.gz  -C /usr/local</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>这里要格外注意到这里并没有安装完，只是解压到文件 /usr/local 下，还需要手动进行编译安装（如果没有编译后面还会出现 GOARCH 参数不对等各种问题）</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/go/src <span class="comment"># src 是存放安装脚本的目录</span></span><br><span class="line">sudo ./make.bash <span class="comment"># 执行自带的安装脚本</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>执行后发现报错</p>
-<p>![](/home/zero/Desktop/Transfer station/Image/Go/go_install_bug3.png)</p>
-<p><strong>Why</strong></p>
-<p>编译GO 1.6版本以上的需要依赖GO 1.4版本的二进制，于是要先编译安装1.4版本</p>
-<p><strong>Solve</strong></p>
-<p>先到 Go 的 github 上下载 <a href="https://github.com/golang/go" target="_blank" rel="noopener">GO 的历代版本包</a>，然后将<strong>分支切换到 go1.4</strong>，之后执行如下命令进行安装</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /go</span><br><span class="line">git checkout go1.<span class="number">4</span></span><br><span class="line">cd /src</span><br><span class="line">sudo ./all.bash</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>执行出现如下错误</p>
-<p>![](/home/zero/Desktop/Transfer station/Image/Go/go1.4_install_bug.png)</p>
-<p><strong>Why</strong></p>
-<blockquote>
-<p>导致上述问题的原因是：CGO_ENABLED: Controls cgo usage during the build. Set it to 1 to include all cgo related files, .c and .go file with “cgo” build directive, in the build. Set it to 0 to ignore them.</p>
-<p>在构建过程中控制 cgo 的使用。当设置为1，在构建时，会包含所有 cgo 相关的文件，如带有 ”cgo” 编译指令的 .c 和 .go 文件。当设置为0，则忽略它们（即禁用 CGO）</p>
-</blockquote>
-<p><strong>Solve</strong></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /go/src</span><br><span class="line">sudo CGO_ENABLED=<span class="number">0</span> ./make.bash</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>重复执行之前第4步安装命令，Go1.4 安装成功</p>
-<p>![go1.4_install_success](/home/zero/Desktop/Transfer station/Image/Go/go1.4_install_success.png)</p>
-</li>
-<li>
-<p>重新执行之前第3步安装命令，Go1.9.1 安装成功，<strong>所以正确的步骤是5423</strong></p>
-</li>
-</ol>
-<h2 id="3-配置-go-环境变量"><a class="markdownIt-Anchor" href="#3-配置-go-环境变量"></a> 3、配置 Go 环境变量</h2>
-<p>说明：这里需要2个知识点 -&gt; Ubuntu 下配置文件 .profile .bashrc 等、环境变量访问，需要上网查阅完整知识，这里只解释相关步骤</p>
-<p><strong>~/.bashrc 和 ~/.profile 一些理解</strong></p>
-<ul>
-<li>
-<p>都是当前用户的配置文件，只在当前用户下产生作用</p>
-</li>
-<li>
-<p>profile 只在登录系统时执行一次，而 bashrc 在每次打开终端的时候都会执行</p>
-</li>
-<li>
-<p>如果想要更改后的 profile 产生作用，第一种是重新登录，第二种是 source ~/.profile，但是这个只对当前终端产生作用，在打开新的终端中 profile 的更改无效</p>
-</li>
-<li>
-<p><strong>不知道为什么感觉，每次重新登录后，对 profile 的所有更改都无效，必须每次执行 source 才会有效</strong></p>
-</li>
-</ul>
-<ol>
-<li>
-<p>~/.profile 文件的修改，执行以下命令</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.profile</span><br><span class="line">// 文件末尾添加以下内容</span><br><span class="line">export GOPATH=<span class="variable">$HOME</span>/gowork </span><br><span class="line"><span class="comment"># GOPATH 表示 Go 的工作目录，是存放源代码，库等东西的地方，可以有多个GOPATH</span></span><br><span class="line">export PATH=<span class="variable">$PATH:</span><span class="variable">$GOPATH</span>/bin</span><br><span class="line"><span class="comment"># PATH 需要用 $PATH: 继承其他地方的 PATH 目录，不然后果很惨</span></span><br><span class="line">export GOBIN=<span class="variable">$GOPATH</span>/bin</span><br><span class="line"><span class="comment"># GOBIN 是存放，执行 go install 执命令后产生的可执行文件的地方</span></span><br></pre></td></tr></table></figure>
-<p>以上解释详见</p>
-</li>
-<li>
-<p>重新记载<code>profile</code></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>检查配置，执行 go env，注意 GOPATH GOBIN GOARCH</p>
-<p>![go_env](/home/zero/Desktop/Transfer station/Image/Go/go_env.png)</p>
-</li>
-</ol>
-<h2 id="4-运行你的第一个程序"><a class="markdownIt-Anchor" href="#4-运行你的第一个程序"></a> 4、运行你的第一个程序</h2>
+<h2 id="运行你的第一个程序"><a class="markdownIt-Anchor" href="#运行你的第一个程序"></a> 运行你的第一个程序</h2>
 <p>说明：请先阅读官方文档，<a href="https://go-zh.org/doc/code.html" target="_blank" rel="noopener">如何使用 Go 编程</a>，以下内容全部参照官方文档，只对其中部分内容做展示，见第5部分</p>
-<h2 id="5-如何使用-github-做-go-工作区-的版本控制"><a class="markdownIt-Anchor" href="#5-如何使用-github-做-go-工作区-的版本控制"></a> 5、如何使用 Github 做 Go 工作区 的版本控制</h2>
-<p>说明：在第4部分中，我们创建的源代码库目录是 $GOPATH/src/github.com/user/hello，会发现目录结构和 github 网站结构大致相同</p>
-<ol>
-<li>
-<p>创建一个源代码库 Go</p>
+<h2 id="如何使用-github-做-go-工作区-的版本控制"><a class="markdownIt-Anchor" href="#如何使用-github-做-go-工作区-的版本控制"></a> 如何使用 Github 做 Go 工作区 的版本控制</h2>
+<p>说明：在第4部分中，我们创建的源代码库目录是 <code>$GOPATH/src/github.com/user/hello</code>，会发现目录结构和 github 网站结构大致相同</p>
+<h3 id="创建一个源代码库-go"><a class="markdownIt-Anchor" href="#创建一个源代码库-go"></a> 创建一个源代码库 Go</h3>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="variable">$GOPATH</span>/src/github.com/user/Go</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>创建 hello.go</p>
+<h3 id="创建-hellogo"><a class="markdownIt-Anchor" href="#创建-hellogo"></a> 创建 hello.go</h3>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim hello.<span class="keyword">go</span></span><br><span class="line"># 输入以下内容</span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Printf(<span class="string">"Hello go in github!\n"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>编译运行 go install</p>
+<h3 id="编译运行-go-install"><a class="markdownIt-Anchor" href="#编译运行-go-install"></a> 编译运行 go install</h3>
 <p>说明：go install 后如果不加文件名，会执行当前目录下所有 go 源码文件，执行后会在 $GOPATH 目录中生成可执行文件 hello，<strong>如果出现问题，请检查 $GOPATH  目录是否正确，可以访问</strong></p>
-</li>
-<li>
-<p>执行 hello 查看结果，<strong>这里可能会出现问题，因为无法复制问题没有图片，原因可能是 Ubuntu 终端下有一个命令是 hello，会输出 Hello world!，直接执行 hello 终端可能会认为你访问你个未安装的指令</strong></p>
+<h3 id="执行-hello-查看结果"><a class="markdownIt-Anchor" href="#执行-hello-查看结果"></a> 执行 hello 查看结果</h3>
+<p><strong>这里可能会出现问题，因为无法复制问题没有图片，原因可能是 Ubuntu 终端下有一个命令是 hello，会输出 Hello world!，直接执行 hello 终端可能会认为你访问你个未安装的指令</strong></p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$GOBIN</span>/hello</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>在 github 网站上创建仓库 Go</p>
-<p>![go_github](/home/zero/Desktop/Transfer station/Image/Go/go_github.png)</p>
-</li>
-<li>
-<p>终端下执行如下命令，连接到远程 github 仓库</p>
+<h3 id="在-github-网站上创建仓库-go"><a class="markdownIt-Anchor" href="#在-github-网站上创建仓库-go"></a> 在 github 网站上创建仓库 Go</h3>
+<h3 id="终端下执行如下命令连接到远程-github-仓库"><a class="markdownIt-Anchor" href="#终端下执行如下命令连接到远程-github-仓库"></a> 终端下执行如下命令，连接到远程 github 仓库</h3>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"# Go"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com/wjh624/Go.git <span class="comment"># 此处是你的 SSH 的内容</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>输入用户名和密码 OK</p>
-</li>
-</ol>
-<h2 id="6-中途出现过的-bug"><a class="markdownIt-Anchor" href="#6-中途出现过的-bug"></a> 6、中途出现过的 Bug</h2>
-<p>说明：此处文本介绍，方便 Bug 问题搜索</p>
-<p><strong>1、go intall: cannot install cross-compiled binaries when GOBIN is set</strong></p>
-<p>![go_install_bug](/home/zero/Desktop/Transfer station/Image/Go/go_install_bug.png)</p>
-<p>**When: ** 执行 go install 编译 hello.go</p>
-<p>**Why: ** 在网上一直没找到相关问题的解决，按照翻译的中文，交叉编译问题查找，发现 Go 语言是可以实现交叉编译的（比如 linux 下运行 win go 文件），但是我运行的一直是 linux 下的啊，猜测是 <strong>$GOARCH=386  参数错误</strong>，为什么这个参数会错误呢，因为之前并没有完全安装和 Go 导致的（只是简单拷贝到目录，没有运行安装脚本），由此可见每一步都是有理由的，每一步都需谨慎，每一步都尽量保证可逆，每一个 Bug 出现都是有原因的啊，找到它</p>
-<p>![goarch](/home/zero/Desktop/Transfer station/Image/Go/goarch.png)</p>
-<p>**Solve:**改成 $GOARCH=amd64</p>
-<p>**2、open /usr/local/go/bin/hello: permisson denied **</p>
-<p>![go_install_bug2](/home/zero/Desktop/Transfer station/Image/Go/go_install_bug2.png)</p>
-<p><strong>When :</strong> 执行 go install 编译 hello.go</p>
-<p><strong>Why :</strong> 后来查资料的时候知道了 go intall 会在 bin 目录下生成可执行文件，这里显然就是 bin 目录无法访问，怎么能无法访问呢，花了好长时间才知道 $GOBIN 的目录错了，为什么会出现这个错误呢，因为之前安装 golong，看博客上配置 .bashrc，加了一堆内容，自己也没仔细搞懂，就加上了，哎还是那句话，弄懂每一步，记录每一步，每一个 bug 必定有前因后果，弄懂原理</p>
-<p>**Solve: ** 去掉 .bashrc 文件中的之前添加的内容，配置的更改主要放在 profile 中</p>
-<h2 id="7-reflect"><a class="markdownIt-Anchor" href="#7-reflect"></a> 7、Reflect</h2>
+<h3 id="输入用户名和密码-ok"><a class="markdownIt-Anchor" href="#输入用户名和密码-ok"></a> 输入用户名和密码 OK</h3>
+<h2 id="reflect"><a class="markdownIt-Anchor" href="#reflect"></a> Reflect</h2>
 <p>一路曲折，问题很多，花了很长时间，但是好歹独立完成了</p>
 <p>其实上面绝大部分问题都是可以避免的，或者说仔细想想很好解决的，花了很长时间的原因在于，我不是真正理解或者完全理解网络上博客那些步骤的意思，那些命令的意思，只是照猫画瓢，以至于后面会因为前面的纰漏出现很多问题，所以再给自己强调一下，每一步都要弄懂，每一步都要记录下来，每一步都要考虑可能后果，每一步尽量可逆，每一步都要谨慎啊（这里突然想到德润老板之前网上教我安装 Ubuntu 系统的时候，每一步都标号标出，甚至每一步不厌花时间给我讲清楚原理，是多么有用，很感谢）如果我能把那样方式用在这里也就不会出现这些问题了</p>
 <p>还有比较致命的一点，<strong>当出现问题时总是想着网上搜索如何解决它，不是，我应该先想问题为什么会出现</strong>，只有明白出现的前因后果，才是懂得原理，才能更好的解决</p>
@@ -568,16 +450,7 @@
     
     
     
-    <div>
-      
-        <div>
-    
-        <div style="text-align:center; color: #00CD00; font-size:14px;
-        ">------------------------------------------ The End ------------------------------------------</div>
-    
-</div>
-      
-    </div>
+
     
 
     
@@ -692,7 +565,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -703,7 +576,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -776,7 +649,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装编辑器vscode"><span class="nav-number">1.</span> <span class="nav-text"> 1、安装编辑器（VSCode）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装-golang"><span class="nav-number">2.</span> <span class="nav-text"> 2、安装 golang</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置-go-环境变量"><span class="nav-number">3.</span> <span class="nav-text"> 3、配置 Go 环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-运行你的第一个程序"><span class="nav-number">4.</span> <span class="nav-text"> 4、运行你的第一个程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-如何使用-github-做-go-工作区-的版本控制"><span class="nav-number">5.</span> <span class="nav-text"> 5、如何使用 Github 做 Go 工作区 的版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-中途出现过的-bug"><span class="nav-number">6.</span> <span class="nav-text"> 6、中途出现过的 Bug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-reflect"><span class="nav-number">7.</span> <span class="nav-text"> 7、Reflect</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装golang14"><span class="nav-number">1.</span> <span class="nav-text"> 安装golang1.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装golang19"><span class="nav-number">2.</span> <span class="nav-text"> 安装golang1.9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行你的第一个程序"><span class="nav-number">3.</span> <span class="nav-text"> 运行你的第一个程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用-github-做-go-工作区-的版本控制"><span class="nav-number">4.</span> <span class="nav-text"> 如何使用 Github 做 Go 工作区 的版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个源代码库-go"><span class="nav-number">4.1.</span> <span class="nav-text"> 创建一个源代码库 Go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-hellogo"><span class="nav-number">4.2.</span> <span class="nav-text"> 创建 hello.go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译运行-go-install"><span class="nav-number">4.3.</span> <span class="nav-text"> 编译运行 go install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-hello-查看结果"><span class="nav-number">4.4.</span> <span class="nav-text"> 执行 hello 查看结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-github-网站上创建仓库-go"><span class="nav-number">4.5.</span> <span class="nav-text"> 在 github 网站上创建仓库 Go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#终端下执行如下命令连接到远程-github-仓库"><span class="nav-number">4.6.</span> <span class="nav-text"> 终端下执行如下命令，连接到远程 github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入用户名和密码-ok"><span class="nav-number">4.7.</span> <span class="nav-text"> 输入用户名和密码 OK</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reflect"><span class="nav-number">5.</span> <span class="nav-text"> Reflect</span></a></li></ol></div>
             
 
           </div>
@@ -814,7 +687,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -825,7 +698,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.7k字</span>
+  <span class="post-count">博客全站共3.3k字</span>
 </div>
 
         
@@ -922,6 +795,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
