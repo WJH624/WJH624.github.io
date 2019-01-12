@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Ubuntu,Go,开发环境," />
+  <meta name="keywords" content="Ubuntu,Go," />
 
 
 
@@ -88,13 +88,13 @@
 
 
 
-<meta name="keywords" content="Ubuntu,Go,开发环境">
+<meta name="keywords" content="Ubuntu,Go">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装 go 语言开发环境（Ubuntu）">
 <meta property="og:url" content="http://wjh624.github.io/2018/09/27/安装-go-语言开发环境（Ubuntu）/index.html">
 <meta property="og:site_name" content="Zero&#39;s note">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T14:09:26.099Z">
+<meta property="og:updated_time" content="2019-01-12T11:51:25.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装 go 语言开发环境（Ubuntu）">
 
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-11T22:09:26+08:00">
-                2018-10-11
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-12T19:51:25+08:00">
+                2019-01-12
               </time>
             
           </span>
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  9
                 </span>
               
             </div>
@@ -416,18 +416,12 @@
       
         <hr>
 <a id="more"></a>
+<p><strong>Ubuntu 16.04 LTS 64bit</strong></p>
 <blockquote class="blockquote-center">Table of Contents</blockquote> 
-<p><ul class="markdownIt-TOC">
-<li><a href="#1-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8vscode">1、安装编辑器（VSCode）</a></li>
-<li><a href="#2-%E5%AE%89%E8%A3%85-golang">2、安装 golang</a></li>
-<li><a href="#3-%E9%85%8D%E7%BD%AE-go-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">3、配置 Go 环境变量</a></li>
-<li><a href="#4-%E8%BF%90%E8%A1%8C%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F">4、运行你的第一个程序</a></li>
-<li><a href="#5-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-github-%E5%81%9A-go-%E5%B7%A5%E4%BD%9C%E5%8C%BA-%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6">5、如何使用 Github 做 Go 工作区 的版本控制</a></li>
-<li><a href="#6-%E4%B8%AD%E9%80%94%E5%87%BA%E7%8E%B0%E8%BF%87%E7%9A%84-bug">6、中途出现过的 Bug</a></li>
-<li><a href="#7-reflect">7、Reflect</a></li>
-</ul>
-</p>
-<p><strong>环境： Ubuntu 16.04 LTS 64bit</strong></p>
+<p><strong>安装golang1.4</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">4</span>-bootstrap-<span class="number">20170531</span>.tar.gz  </span><br><span class="line">tar -xf go1.<span class="number">4</span>-bootstrap-<span class="number">20170531</span>.tar.gz  </span><br><span class="line">cd go/src  </span><br><span class="line">./make.bash</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 成功后信息  </span></span><br><span class="line"><span class="comment"># Installed Go for linux/amd64 in /home/test/go  </span></span><br><span class="line"><span class="comment"># Installed commands in /home/test/go/bin  </span></span><br><span class="line">cd ~/  </span><br><span class="line">mv go go1.<span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p><strong>安装golang1.9</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">9</span>.src.tar.gz  </span><br><span class="line">tar -xf go1.<span class="number">9</span>.src.tar.gz  </span><br><span class="line">cd go/src</span><br><span class="line">./all.bash  </span><br><span class="line"></span><br><span class="line">cd ~/</span><br><span class="line">mv go /usr/local/go1.<span class="number">9</span></span><br><span class="line">mkdir -p gowork/src gowork/bin gowork/pkg</span><br><span class="line">sudo subl /etc/profile</span><br><span class="line"><span class="comment"># 文末添加一下内容</span></span><br><span class="line">export GOROOT=/usr/local/go1.<span class="number">9</span></span><br><span class="line">export GOPATH=<span class="variable">$HOME</span>/gowork</span><br><span class="line">export PATH=<span class="variable">$PATH:</span>/usr/local/go1.<span class="number">9</span>/bin</span><br><span class="line">source /etc/profile</span><br><span class="line">go version</span><br></pre></td></tr></table></figure>
 <h2 id="1-安装编辑器vscode"><a class="markdownIt-Anchor" href="#1-安装编辑器vscode"></a> 1、安装编辑器（VSCode）</h2>
 <p>说明：编辑器更具个人喜好选择，这里只是尝试一下 VSCode 的使用</p>
 <p><a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="noopener">官方说明：Running VS Code on Linux</a></p>
@@ -598,8 +592,6 @@
           
             <a href="/tags/Go/" rel="tag"># Go</a>
           
-            <a href="/tags/开发环境/" rel="tag"># 开发环境</a>
-          
         </div>
       
 
@@ -722,7 +714,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -833,7 +825,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.6k字</span>
+  <span class="post-count">博客全站共4.7k字</span>
 </div>
 
         
