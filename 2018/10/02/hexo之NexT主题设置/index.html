@@ -81,7 +81,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Zero's note" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Zero's blog" type="application/atom+xml" />
 
 
 
@@ -93,10 +93,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo之NexT主题设置">
 <meta property="og:url" content="http://wjh624.github.io/2018/10/02/hexo之NexT主题设置/index.html">
-<meta property="og:site_name" content="Zero&#39;s note">
+<meta property="og:site_name" content="Zero&#39;s blog">
 <meta property="og:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T12:48:43.138Z">
+<meta property="og:updated_time" content="2019-01-16T14:51:42.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo之NexT主题设置">
 <meta name="twitter:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
@@ -136,7 +136,7 @@
 
 
 <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
-  <title>hexo之NexT主题设置 | Zero's note</title>
+  <title>hexo之NexT主题设置 | Zero's blog</title>
   
 
 
@@ -167,7 +167,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zero's note</span>
+        <span class="site-title">Zero's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -202,12 +202,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            关于
+            分类
           </a>
         </li>
       
@@ -222,12 +222,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+        <li class="menu-item menu-item-books">
+          <a href="/categories/阅读" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            分类
+            books
           </a>
         </li>
       
@@ -238,6 +238,16 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -279,11 +289,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjh624">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/IMG_1047.JPG">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zero's note">
+      <meta itemprop="name" content="Zero's blog">
     </span>
 
     
@@ -319,7 +329,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-16T20:48:43+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-16T22:51:42+08:00">
                 2019-01-16
               </time>
             
@@ -380,7 +390,7 @@
                 </span>
                 
                 <span title="字数统计">
-                  728
+                  1.2k
                 </span>
               
 
@@ -408,8 +418,8 @@
         <p>从网上选择并学习一些美化 <code>hexo-Next</code> 主题的方法，记录如下</p>
 <a id="more"></a>
 <hr>
-<p>站点配置文件：根目录下的 <code>_config</code>文件</p>
-<p>主题配置文件：<code>themes/next</code>目录下的<code>_config</code>文件</p>
+<p>站点配置文件：<code>根目录下的 _config.yml</code></p>
+<p>主题配置文件：<code>themes/next/_config.yml</code></p>
 <h2 id="选择-next-的子主题"><a class="markdownIt-Anchor" href="#选择-next-的子主题"></a> 选择 NexT 的子主题</h2>
 <ul>
 <li>
@@ -441,7 +451,7 @@
 <ul>
 <li>
 <p>修改文件 <code>themes\next\source\css\_common\components\post\post-type.styl</code>，在末尾添加如下css样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 文章内链接文本样式</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0000FF</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0000FF</span>;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-id">#0000FF</span>;</span><br><span class="line">    <span class="selector-tag">border-bottom</span>: <span class="selector-tag">none</span>;</span><br><span class="line">    <span class="selector-tag">border-bottom</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#0000FF</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 文章内链接文本样式</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0000FF</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0000FF</span>; <span class="comment">/*蓝色*/</span></span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-id">#0000FF</span>;</span><br><span class="line">    <span class="selector-tag">border-bottom</span>: <span class="selector-tag">none</span>;</span><br><span class="line">    <span class="selector-tag">border-bottom</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#0000FF</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="自定义行内代码块样式"><a class="markdownIt-Anchor" href="#自定义行内代码块样式"></a> 自定义行内代码块样式</h2>
@@ -456,7 +466,10 @@
 </li>
 </ul>
 <h2 id="添加文章阅读量统计功能"><a class="markdownIt-Anchor" href="#添加文章阅读量统计功能"></a> <a href="https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud" target="_blank" rel="noopener">添加文章阅读量统计功能</a></h2>
-<h2 id="实现统计功能"><a class="markdownIt-Anchor" href="#实现统计功能"></a> 实现统计功能</h2>
+<h2 id="访问人数总访问量设置"><a class="markdownIt-Anchor" href="#访问人数总访问量设置"></a> 访问人数，总访问量设置</h2>
+<p>打开主题配置文件，添加如下内容</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show PV/UV of the website/page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="comment"># count values only if the other configs are false</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># custom uv span for the whole site</span></span><br><span class="line"><span class="attr">  site_uv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_uv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-user"&gt;&lt;/i&gt;</span> <span class="string">访问人数</span></span><br><span class="line"><span class="attr">  site_uv_footer:</span> <span class="string">人</span></span><br><span class="line">  <span class="comment"># custom pv span for the whole site</span></span><br><span class="line"><span class="attr">  site_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-eye"&gt;&lt;/i&gt;</span> <span class="string">总访问量</span></span><br><span class="line"><span class="attr">  site_pv_footer:</span> <span class="string">次</span></span><br><span class="line">  <span class="comment"># custom pv span for one page only</span></span><br><span class="line">  <span class="comment"># page_pv: true</span></span><br><span class="line">  <span class="comment"># page_pv_header: &lt;i class="fa fa-file-o"&gt;&lt;/i&gt; 阅读数</span></span><br><span class="line">  <span class="comment"># page_pv_footer:</span></span><br></pre></td></tr></table></figure>
+<h2 id="实现统计功能字数统计总字数统计阅读时长统计"><a class="markdownIt-Anchor" href="#实现统计功能字数统计总字数统计阅读时长统计"></a> 实现统计功能：字数统计，总字数统计，阅读时长统计</h2>
 <ul>
 <li>
 <p>在根目录下安装 <code>hexo-wordcount</code>，运行</p>
@@ -464,7 +477,7 @@
 </li>
 <li>
 <p>主题配置文件设置参数如下如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">post_wordcount:</span><br><span class="line">  item_text: <span class="literal">true</span></span><br><span class="line">  wordcount: <span class="literal">true</span></span><br><span class="line">  min2read: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: <span class="literal">false</span>	<span class="comment">/*显示统计数字和图标之间的文本说明*/</span></span><br><span class="line">  wordcount: <span class="literal">true</span>	<span class="comment">/*每篇文章的字数*/</span></span><br><span class="line">  min2read: <span class="literal">false</span>	<span class="comment">/*每篇阅读时长*/</span></span><br><span class="line">  totalcount: <span class="literal">true</span>	<span class="comment">/*全站的总字数*/</span></span><br><span class="line">  separated_meta: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>注意此时底部虽然有字数统计，但是没有 <code>|</code> 符号，需要在<code>\themes\next\layout\css\_partials\footer.swig</code>中加</p>
@@ -472,12 +485,21 @@
 </li>
 </ul>
 <h2 id="修改字体大小"><a class="markdownIt-Anchor" href="#修改字体大小"></a> 修改字体大小</h2>
-<ul>
-<li>
-<p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，将<code>$font-size-base</code>改成<code>16px</code>，如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ font-size-base = <span class="number">16</span>px</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>打开 <code>\themes\next\source\css\ _variables\base.styl</code> 文件，将 <code>$font-size-base</code> 改成 <code>15px</code> ，如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ font-size-base = <span class="number">15</span>px</span><br></pre></td></tr></table></figure>
+<h2 id="头像设置"><a class="markdownIt-Anchor" href="#头像设置"></a> 头像设置</h2>
+<p>打开 <strong>主题配置文件</strong> 找到 <code>Sidebar Avatar</code> 字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar: /images/header.jpg</span><br></pre></td></tr></table></figure>
+<p>这是头像的路径，只需把你的头像命名为 <code>header.jpg</code> （随便命名）放入 <code>themes/next/source/images</code> 中，将 <code>avatar</code> 的路径名改成你的头像名就OK啦</p>
+<h2 id="实现侧边栏页面的圆角"><a class="markdownIt-Anchor" href="#实现侧边栏页面的圆角"></a> 实现侧边栏页面的圆角</h2>
+<p>打开 <code>/blog/themes/next/source/css/_variables/Pisces.styl</code> 文件，找到 <code>$border-radius</code> ，做如下更改</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// Borders</span><br><span class="line">// --------------------------------------------------</span><br><span class="line">$box-shadow-inner                 = initial;</span><br><span class="line">$box-shadow                       = initial;</span><br><span class="line"></span><br><span class="line">$border-radius-inner              = initial;</span><br><span class="line">-$border-radius                    = initial;</span><br><span class="line">+$border-radius                    = 12px;</span><br></pre></td></tr></table></figure>
+<p>打开 <code>/blog/themes/next/source/css/_schemes/Pisces/_layout.styl</code> 文件，做如下更改</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header-inner</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: $sidebar-desktop;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">box-shadow</span>: $box-shadow-inner;</span><br><span class="line"> <span class="attribute">-border-radius</span>: $border-radius-inner;</span><br><span class="line"> +border-radius: $border-radius; /*修改上面的侧边栏的弧度*/</span><br></pre></td></tr></table></figure>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">padding</span>: $content-desktop-padding;</span><br><span class="line">  <span class="attribute">width</span>: $content-desktop;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">700px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: $box-shadow-inner;</span><br><span class="line"> - border-radius: $border-radius-inner;</span><br><span class="line"> + border-radius: $border-radius; /*修改整个文章页面的弧度*/</span><br></pre></td></tr></table></figure>
+<h2 id="阅读全文按钮改弧度"><a class="markdownIt-Anchor" href="#阅读全文按钮改弧度"></a> <mark>阅读全文</mark>按钮改弧度</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// Button</span><br><span class="line">- $btn-default-radius           = 2px</span><br><span class="line">+ $btn-default-radius           = 8px</span><br><span class="line">$btn-default-bg               = white</span><br><span class="line">$btn-default-color            = $text-color</span><br><span class="line">$btn-default-border-color     = $text-color</span><br><span class="line">$btn-default-hover-color      = white</span><br><span class="line">$btn-default-hover-bg         = $black-deep</span><br></pre></td></tr></table></figure>
+<h2 id="代码块增加一键复制功能"><a class="markdownIt-Anchor" href="#代码块增加一键复制功能"></a> 代码块增加一键复制功能</h2>
 
       
     </div>
@@ -586,6 +608,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/IMG_1047.JPG"
+                alt="wjh624" />
+            
               <p class="site-author-name" itemprop="name">wjh624</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -597,7 +623,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -619,7 +645,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -681,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能"><span class="nav-number">8.</span> <span class="nav-text"> 实现统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">9.</span> <span class="nav-text"> 修改字体大小</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问人数总访问量设置"><span class="nav-number">8.</span> <span class="nav-text"> 访问人数，总访问量设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能字数统计总字数统计阅读时长统计"><span class="nav-number">9.</span> <span class="nav-text"> 实现统计功能：字数统计，总字数统计，阅读时长统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">10.</span> <span class="nav-text"> 修改字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">11.</span> <span class="nav-text"> 头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现侧边栏页面的圆角"><span class="nav-number">12.</span> <span class="nav-text"> 实现侧边栏页面的圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文按钮改弧度"><span class="nav-number">13.</span> <span class="nav-text"> 阅读全文按钮改弧度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块增加一键复制功能"><span class="nav-number">14.</span> <span class="nav-text"> 代码块增加一键复制功能</span></a></li></ol></div>
             
 
           </div>
@@ -713,7 +739,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">2.1k</span>
+    <span title="Site words total count">3.4k</span>
   
 </div>
 
@@ -731,16 +757,27 @@
 
 
 
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-  <span class="post-meta-divider">|</span>
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
 
-
-<div class="theme-info">
-  <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.1k字</span>
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
 </div>
 
-        
 
 
 
