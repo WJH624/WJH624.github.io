@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Zero&#39;s blog">
 <meta property="og:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T15:23:33.969Z">
+<meta property="og:updated_time" content="2019-01-16T15:41:46.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo之NexT主题设置">
 <meta name="twitter:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-16T23:23:33+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-16T23:41:46+08:00">
                 2019-01-16
               </time>
             
@@ -365,18 +365,12 @@
 
           
           
-             <span id="/2018/10/02/hexo之NexT主题设置/" class="leancloud_visitors" data-flag-title="hexo之NexT主题设置">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -390,7 +384,7 @@
                 </span>
                 
                 <span title="字数统计">
-                  1.2k
+                  1.6k
                 </span>
               
 
@@ -466,23 +460,29 @@
 </li>
 </ul>
 <h2 id="添加文章阅读量统计功能"><a class="markdownIt-Anchor" href="#添加文章阅读量统计功能"></a> <a href="https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud" target="_blank" rel="noopener">添加文章阅读量统计功能</a></h2>
-<h2 id="访问人数总访问量设置"><a class="markdownIt-Anchor" href="#访问人数总访问量设置"></a> 访问人数，总访问量设置</h2>
-<p>打开主题配置文件，添加如下内容</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show PV/UV of the website/page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="comment"># count values only if the other configs are false</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># custom uv span for the whole site</span></span><br><span class="line"><span class="attr">  site_uv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_uv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-user"&gt;&lt;/i&gt;</span> <span class="string">访问人数</span></span><br><span class="line"><span class="attr">  site_uv_footer:</span> <span class="string">人</span></span><br><span class="line">  <span class="comment"># custom pv span for the whole site</span></span><br><span class="line"><span class="attr">  site_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-eye"&gt;&lt;/i&gt;</span> <span class="string">总访问量</span></span><br><span class="line"><span class="attr">  site_pv_footer:</span> <span class="string">次</span></span><br><span class="line">  <span class="comment"># custom pv span for one page only</span></span><br><span class="line">  <span class="comment"># page_pv: true</span></span><br><span class="line">  <span class="comment"># page_pv_header: &lt;i class="fa fa-file-o"&gt;&lt;/i&gt; 阅读数</span></span><br><span class="line">  <span class="comment"># page_pv_footer:</span></span><br></pre></td></tr></table></figure>
-<h2 id="实现统计功能字数统计总字数统计阅读时长统计"><a class="markdownIt-Anchor" href="#实现统计功能字数统计总字数统计阅读时长统计"></a> 实现统计功能：字数统计，总字数统计，阅读时长统计</h2>
-<ul>
-<li>
+<h2 id="实现统计功能字数统计总字数统计阅读时长统计不蒜子计数"><a class="markdownIt-Anchor" href="#实现统计功能字数统计总字数统计阅读时长统计不蒜子计数"></a> 实现统计功能：字数统计，总字数统计，阅读时长统计（不蒜子计数）</h2>
 <p>在根目录下安装 <code>hexo-wordcount</code>，运行</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>在文件 <code>themes\next\layout\_third-party\analytics\busuanzi-counter.swig</code> 中，做以下修改</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-&lt;script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</span><br><span class="line">+&lt;script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
 <p>主题配置文件设置参数如下如下</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: <span class="literal">false</span>	<span class="comment">/*显示统计数字和图标之间的文本说明*/</span></span><br><span class="line">  wordcount: <span class="literal">true</span>	<span class="comment">/*每篇文章的字数*/</span></span><br><span class="line">  min2read: <span class="literal">false</span>	<span class="comment">/*每篇阅读时长*/</span></span><br><span class="line">  totalcount: <span class="literal">true</span>	<span class="comment">/*全站的总字数*/</span></span><br><span class="line">  separated_meta: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="访问人数总访问量设置文章阅读量不蒜子计数"><a class="markdownIt-Anchor" href="#访问人数总访问量设置文章阅读量不蒜子计数"></a> 访问人数，总访问量设置，文章阅读量（不蒜子计数）</h2>
+<p>打开主题配置文件，找到如下配置内容</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show PV/UV of the website/page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="comment"># count values only if the other configs are false</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># custom uv span for the whole site</span></span><br><span class="line"><span class="attr">  site_uv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_uv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-user"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="attr">  site_uv_footer:</span></span><br><span class="line">  <span class="comment"># custom pv span for the whole site</span></span><br><span class="line"><span class="attr">  site_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-eye"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="attr">  site_pv_footer:</span></span><br><span class="line">  <span class="comment"># custom pv span for one page only</span></span><br><span class="line"><span class="attr">  page_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  page_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-file-o"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="attr">  page_pv_footer:</span></span><br></pre></td></tr></table></figure>
+<p>将<code>enable</code>的值由<code>false</code>改为<code>true</code>，便可以看到页脚出现访问量，上述配置表示：</p>
+<ul>
+<li><code>site_uv</code>表示是否显示整个网站的UV数</li>
+<li><code>site_pv</code>表示是否显示整个网站的PV数</li>
+<li><code>page_pv</code>表示是否显示每个页面的PV数</li>
+</ul>
+<p>对于不蒜子的配置可以随意更改，如</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show PV/UV of the website/page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="comment"># count values only if the other configs are false</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># custom uv span for the whole site</span></span><br><span class="line"><span class="attr">  site_uv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_uv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-user"&gt;&lt;/i&gt;</span> <span class="string">访客数</span></span><br><span class="line"><span class="attr">  site_uv_footer:</span> <span class="string">人</span></span><br><span class="line">  <span class="comment"># custom pv span for the whole site</span></span><br><span class="line"><span class="attr">  site_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-eye"&gt;&lt;/i&gt;</span> <span class="string">总访问量</span></span><br><span class="line"><span class="attr">  site_pv_footer:</span> <span class="string">次</span></span><br></pre></td></tr></table></figure>
+<p>注意事项：</p>
+<ul>
+<li>两种方法选择一种使用即可，都使用可能会出现无法显示的问题</li>
+<li>使用hexo s部署在本地预览效果的时候，uv数和pv数会过大，这是由于不蒜子用户使用一个存储空间，所以使用localhost:4000进行本地预览的时候会导致数字异常，这是正常现象，只需要将博客部署至云端即可恢复正常。</li>
+<li>网站运行一段时间后想要初始化访问次数，官方回答是可以注册登录自行修改阅读次数，但是我登录官网依旧显示无法注册，如果有方法可以在评论中指出</li>
 </ul>
 <h2 id="修改字体大小"><a class="markdownIt-Anchor" href="#修改字体大小"></a> 修改字体大小</h2>
 <p>打开 <code>\themes\next\source\css\ _variables\base.styl</code> 文件，将 <code>$font-size-base</code> 改成 <code>15px</code> ，如下所示：</p>
@@ -707,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问人数总访问量设置"><span class="nav-number">8.</span> <span class="nav-text"> 访问人数，总访问量设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能字数统计总字数统计阅读时长统计"><span class="nav-number">9.</span> <span class="nav-text"> 实现统计功能：字数统计，总字数统计，阅读时长统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">10.</span> <span class="nav-text"> 修改字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">11.</span> <span class="nav-text"> 头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现侧边栏页面的圆角"><span class="nav-number">12.</span> <span class="nav-text"> 实现侧边栏页面的圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文按钮改弧度"><span class="nav-number">13.</span> <span class="nav-text"> 阅读全文按钮改弧度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块增加一键复制功能"><span class="nav-number">14.</span> <span class="nav-text"> 代码块增加一键复制功能</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能字数统计总字数统计阅读时长统计不蒜子计数"><span class="nav-number">8.</span> <span class="nav-text"> 实现统计功能：字数统计，总字数统计，阅读时长统计（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问人数总访问量设置文章阅读量不蒜子计数"><span class="nav-number">9.</span> <span class="nav-text"> 访问人数，总访问量设置，文章阅读量（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">10.</span> <span class="nav-text"> 修改字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">11.</span> <span class="nav-text"> 头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现侧边栏页面的圆角"><span class="nav-number">12.</span> <span class="nav-text"> 实现侧边栏页面的圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文按钮改弧度"><span class="nav-number">13.</span> <span class="nav-text"> 阅读全文按钮改弧度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块增加一键复制功能"><span class="nav-number">14.</span> <span class="nav-text"> 代码块增加一键复制功能</span></a></li></ol></div>
             
 
           </div>
@@ -739,7 +739,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">3.4k</span>
+    <span title="Site words total count">3.8k</span>
   
 </div>
 
@@ -763,17 +763,17 @@
 
   
     <span class="site-uv">
-      <i class="fa fa-user"></i> 访问人数
+      <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      人
+      
     </span>
   
 
   
     <span class="site-pv">
-      <i class="fa fa-eye"></i> 总访问量
+      <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次
+      
     </span>
   
 </div>
@@ -932,113 +932,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("jP3QMIalg7LIExAaqaYDsspP-gzGzoHsz", "eNgVuLwHU8MajrLWb2nXr2FP");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
