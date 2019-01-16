@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Zero&#39;s blog">
 <meta property="og:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T14:51:42.273Z">
+<meta property="og:updated_time" content="2019-01-16T15:23:33.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo之NexT主题设置">
 <meta name="twitter:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-16T22:51:42+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-16T23:23:33+08:00">
                 2019-01-16
               </time>
             
@@ -476,12 +476,12 @@
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>主题配置文件设置参数如下如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: <span class="literal">false</span>	<span class="comment">/*显示统计数字和图标之间的文本说明*/</span></span><br><span class="line">  wordcount: <span class="literal">true</span>	<span class="comment">/*每篇文章的字数*/</span></span><br><span class="line">  min2read: <span class="literal">false</span>	<span class="comment">/*每篇阅读时长*/</span></span><br><span class="line">  totalcount: <span class="literal">true</span>	<span class="comment">/*全站的总字数*/</span></span><br><span class="line">  separated_meta: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>在文件 <code>themes\next\layout\_third-party\analytics\busuanzi-counter.swig</code> 中，做以下修改</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-&lt;script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</span><br><span class="line">+&lt;script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>注意此时底部虽然有字数统计，但是没有 <code>|</code> 符号，需要在<code>\themes\next\layout\css\_partials\footer.swig</code>中加</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.footer.powered and theme.footer.theme.enable %&#125;</span><br><span class="line">  &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-divider"</span>&gt;|<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>主题配置文件设置参数如下如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: <span class="literal">false</span>	<span class="comment">/*显示统计数字和图标之间的文本说明*/</span></span><br><span class="line">  wordcount: <span class="literal">true</span>	<span class="comment">/*每篇文章的字数*/</span></span><br><span class="line">  min2read: <span class="literal">false</span>	<span class="comment">/*每篇阅读时长*/</span></span><br><span class="line">  totalcount: <span class="literal">true</span>	<span class="comment">/*全站的总字数*/</span></span><br><span class="line">  separated_meta: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="修改字体大小"><a class="markdownIt-Anchor" href="#修改字体大小"></a> 修改字体大小</h2>
