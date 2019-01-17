@@ -88,15 +88,18 @@
 
 
 
+<meta name="description" content="Ubuntu 16.04 LTS 64bit  安装 golang1.4 12345678910wget https://storage.googleapis.com/golang/go1.4-bootstrap-20170531.tar.gz  tar -xf go1.4-bootstrap-20170531.tar.gz  cd go/src  ./make.bash   # 成功后信息">
 <meta name="keywords" content="Ubuntu,Go">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装 go 语言开发环境 (Ubuntu)">
 <meta property="og:url" content="http://wjh624.github.io/2019/01/16/安装-go-语言开发环境-Ubuntu/index.html">
 <meta property="og:site_name" content="Zero&#39;s blog">
+<meta property="og:description" content="Ubuntu 16.04 LTS 64bit  安装 golang1.4 12345678910wget https://storage.googleapis.com/golang/go1.4-bootstrap-20170531.tar.gz  tar -xf go1.4-bootstrap-20170531.tar.gz  cd go/src  ./make.bash   # 成功后信息">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T13:04:44.097Z">
+<meta property="og:updated_time" content="2019-01-17T10:29:29.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装 go 语言开发环境 (Ubuntu)">
+<meta name="twitter:description" content="Ubuntu 16.04 LTS 64bit  安装 golang1.4 12345678910wget https://storage.googleapis.com/golang/go1.4-bootstrap-20170531.tar.gz  tar -xf go1.4-bootstrap-20170531.tar.gz  cd go/src  ./make.bash   # 成功后信息">
 
 
 
@@ -326,8 +329,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-16T21:04:44+08:00">
-                2019-01-16
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-17T18:29:29+08:00">
+                2019-01-17
               </time>
             
           </span>
@@ -406,16 +409,15 @@
       
 
       
-        <hr>
-<a id="more"></a>
+        <a id="more"></a>
 <p>Ubuntu 16.04 LTS 64bit</p>
-<h2 id="安装golang14"><a class="markdownIt-Anchor" href="#安装golang14"></a> 安装golang1.4</h2>
+<h2 id="安装-golang14"><a class="markdownIt-Anchor" href="#安装-golang14"></a> 安装 golang1.4</h2>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">4</span>-bootstrap-<span class="number">20170531</span>.tar.gz  </span><br><span class="line">tar -xf go1.<span class="number">4</span>-bootstrap-<span class="number">20170531</span>.tar.gz  </span><br><span class="line">cd go/src  </span><br><span class="line">./make.bash</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 成功后信息  </span></span><br><span class="line"><span class="comment"># Installed Go for linux/amd64 in /home/test/go  </span></span><br><span class="line"><span class="comment"># Installed commands in /home/test/go/bin  </span></span><br><span class="line">cd ~/  </span><br><span class="line">mv go go1.<span class="number">4</span></span><br></pre></td></tr></table></figure>
-<h2 id="安装golang19"><a class="markdownIt-Anchor" href="#安装golang19"></a> 安装golang1.9</h2>
+<h2 id="安装-golang19"><a class="markdownIt-Anchor" href="#安装-golang19"></a> 安装 golang1.9</h2>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wget https://storage.googleapis.com/golang/go1.<span class="number">9</span>.src.tar.gz  </span><br><span class="line">tar -xf go1.<span class="number">9</span>.src.tar.gz  </span><br><span class="line">cd go/src</span><br><span class="line">./all.bash  </span><br><span class="line"></span><br><span class="line">cd ~/</span><br><span class="line">mv go /usr/local/go1.<span class="number">9</span></span><br><span class="line">mkdir -p gowork/src gowork/bin gowork/pkg</span><br><span class="line">sudo subl /etc/profile</span><br><span class="line"><span class="comment"># 文末添加一下内容</span></span><br><span class="line">export GOROOT=/usr/local/go1.<span class="number">9</span></span><br><span class="line">export GOPATH=<span class="variable">$HOME</span>/gowork</span><br><span class="line">export PATH=<span class="variable">$PATH:</span>/usr/local/go1.<span class="number">9</span>/bin</span><br><span class="line">source /etc/profile</span><br><span class="line">go version</span><br></pre></td></tr></table></figure>
 <h2 id="运行你的第一个程序"><a class="markdownIt-Anchor" href="#运行你的第一个程序"></a> 运行你的第一个程序</h2>
 <p>说明：请先阅读官方文档，<a href="https://go-zh.org/doc/code.html" target="_blank" rel="noopener">如何使用 Go 编程</a>，以下内容全部参照官方文档，只对其中部分内容做展示，见第5部分</p>
-<h2 id="如何使用-github-做-go-工作区-的版本控制"><a class="markdownIt-Anchor" href="#如何使用-github-做-go-工作区-的版本控制"></a> 如何使用 Github 做 Go 工作区 的版本控制</h2>
+<h2 id="如何使用-github-做-go-工作区的版本控制"><a class="markdownIt-Anchor" href="#如何使用-github-做-go-工作区的版本控制"></a> 如何使用 Github 做 Go 工作区的版本控制</h2>
 <p>说明：在第4部分中，我们创建的源代码库目录是 <code>$GOPATH/src/github.com/user/hello</code>，会发现目录结构和 github 网站结构大致相同</p>
 <h3 id="创建一个源代码库-go"><a class="markdownIt-Anchor" href="#创建一个源代码库-go"></a> 创建一个源代码库 Go</h3>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="variable">$GOPATH</span>/src/github.com/user/Go</span><br></pre></td></tr></table></figure>
@@ -477,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/17/111/" rel="prev" title="111">
-                111 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,7 +561,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -649,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装golang14"><span class="nav-number">1.</span> <span class="nav-text"> 安装golang1.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装golang19"><span class="nav-number">2.</span> <span class="nav-text"> 安装golang1.9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行你的第一个程序"><span class="nav-number">3.</span> <span class="nav-text"> 运行你的第一个程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用-github-做-go-工作区-的版本控制"><span class="nav-number">4.</span> <span class="nav-text"> 如何使用 Github 做 Go 工作区 的版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个源代码库-go"><span class="nav-number">4.1.</span> <span class="nav-text"> 创建一个源代码库 Go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-hellogo"><span class="nav-number">4.2.</span> <span class="nav-text"> 创建 hello.go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译运行-go-install"><span class="nav-number">4.3.</span> <span class="nav-text"> 编译运行 go install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-hello-查看结果"><span class="nav-number">4.4.</span> <span class="nav-text"> 执行 hello 查看结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-github-网站上创建仓库-go"><span class="nav-number">4.5.</span> <span class="nav-text"> 在 github 网站上创建仓库 Go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#终端下执行如下命令连接到远程-github-仓库"><span class="nav-number">4.6.</span> <span class="nav-text"> 终端下执行如下命令，连接到远程 github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入用户名和密码-ok"><span class="nav-number">4.7.</span> <span class="nav-text"> 输入用户名和密码 OK</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reflect"><span class="nav-number">5.</span> <span class="nav-text"> Reflect</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-golang14"><span class="nav-number">1.</span> <span class="nav-text"> 安装 golang1.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-golang19"><span class="nav-number">2.</span> <span class="nav-text"> 安装 golang1.9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行你的第一个程序"><span class="nav-number">3.</span> <span class="nav-text"> 运行你的第一个程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用-github-做-go-工作区的版本控制"><span class="nav-number">4.</span> <span class="nav-text"> 如何使用 Github 做 Go 工作区的版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个源代码库-go"><span class="nav-number">4.1.</span> <span class="nav-text"> 创建一个源代码库 Go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-hellogo"><span class="nav-number">4.2.</span> <span class="nav-text"> 创建 hello.go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译运行-go-install"><span class="nav-number">4.3.</span> <span class="nav-text"> 编译运行 go install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-hello-查看结果"><span class="nav-number">4.4.</span> <span class="nav-text"> 执行 hello 查看结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-github-网站上创建仓库-go"><span class="nav-number">4.5.</span> <span class="nav-text"> 在 github 网站上创建仓库 Go</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#终端下执行如下命令连接到远程-github-仓库"><span class="nav-number">4.6.</span> <span class="nav-text"> 终端下执行如下命令，连接到远程 github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入用户名和密码-ok"><span class="nav-number">4.7.</span> <span class="nav-text"> 输入用户名和密码 OK</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reflect"><span class="nav-number">5.</span> <span class="nav-text"> Reflect</span></a></li></ol></div>
             
 
           </div>
