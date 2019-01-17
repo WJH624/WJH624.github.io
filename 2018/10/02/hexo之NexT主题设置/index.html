@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Zero&#39;s blog">
 <meta property="og:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-17T05:39:38.538Z">
+<meta property="og:updated_time" content="2019-01-17T06:31:41.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo之NexT主题设置">
 <meta name="twitter:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-17T13:39:38+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-17T14:31:41+08:00">
                 2019-01-17
               </time>
             
@@ -384,7 +384,7 @@
                 </span>
                 
                 <span title="字数统计">
-                  2.8k
+                  2.9k
                 </span>
               
 
@@ -533,6 +533,11 @@
 <h2 id="修改文章间分割线"><a class="markdownIt-Anchor" href="#修改文章间分割线"></a> 修改文章间分割线</h2>
 <p>打开 <code>themes/next/source/css/_common/components/post/post-eof.styl</code>，修改 <code>.posts-expand</code> 内的内容替换为如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.posts-expand</span> &#123;</span><br><span class="line">  .post-eof &#123;</span><br><span class="line">    <span class="selector-tag">display</span>: <span class="selector-tag">block</span>;</span><br><span class="line">    margin: $post-eof-margin-top auto $post-eof-margin-bottom;  </span><br><span class="line">    width: 20%; //分割线长度</span><br><span class="line">    height: 3px; // 分割线高度</span><br><span class="line">    background: $grey;</span><br><span class="line">    <span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="添加-readmemd-文件"><a class="markdownIt-Anchor" href="#添加-readmemd-文件"></a> 添加 <a href="http://README.md" target="_blank" rel="noopener">README.md</a> 文件</h2>
+<p>每个项目下一般都有一个 <code>README.md</code> 文件，但是使用 <code>hexo</code> 部署到仓库后，项目下是没有 <a href="http://README.md" target="_blank" rel="noopener">README.md</a> 文件的。</p>
+<p>在 <code>/source/</code> 根目录下添加一个 <code>README.md</code> 文件，修改站点配置文件，将 <code>skip_render</code> 参数的值设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: README.md</span><br></pre></td></tr></table></figure>
+<p>保存退出即可。再次使用 <code>hexo d</code> 命令部署博客的时候就不会在渲染 <code>README.md</code> 这个文件了</p>
 <h2 id="代码块增加一键复制功能"><a class="markdownIt-Anchor" href="#代码块增加一键复制功能"></a> 代码块增加一键复制功能</h2>
 
       
@@ -743,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能-leancloud"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能-LeanCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能字数统计总字数统计阅读时长统计不蒜子计数"><span class="nav-number">8.</span> <span class="nav-text"> 实现统计功能：字数统计，总字数统计，阅读时长统计（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问人数总访问量设置文章阅读量不蒜子计数"><span class="nav-number">9.</span> <span class="nav-text"> 访问人数，总访问量设置，文章阅读量（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">10.</span> <span class="nav-text"> 修改字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">11.</span> <span class="nav-text"> 头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现侧边栏页面的圆角"><span class="nav-number">12.</span> <span class="nav-text"> 实现侧边栏页面的圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文按钮改弧度"><span class="nav-number">13.</span> <span class="nav-text"> 阅读全文按钮改弧度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景图片"><span class="nav-number">14.</span> <span class="nav-text"> 添加背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">15.</span> <span class="nav-text"> 添加背景音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#左边侧边栏添加新分类实际是利用-categories-的分类"><span class="nav-number">16.</span> <span class="nav-text"> 左边侧边栏添加新分类（实际是利用 categories 的分类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改网站的中英文字体"><span class="nav-number">17.</span> <span class="nav-text"> 更改网站的中英文字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览页面的时候显示当前浏览进度将-top-放在侧边栏中"><span class="nav-number">18.</span> <span class="nav-text"> 浏览页面的时候显示当前浏览进度，将 top 放在侧边栏中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章间分割线"><span class="nav-number">19.</span> <span class="nav-text"> 修改文章间分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块增加一键复制功能"><span class="nav-number">20.</span> <span class="nav-text"> 代码块增加一键复制功能</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能-leancloud"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能-LeanCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能字数统计总字数统计阅读时长统计不蒜子计数"><span class="nav-number">8.</span> <span class="nav-text"> 实现统计功能：字数统计，总字数统计，阅读时长统计（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问人数总访问量设置文章阅读量不蒜子计数"><span class="nav-number">9.</span> <span class="nav-text"> 访问人数，总访问量设置，文章阅读量（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">10.</span> <span class="nav-text"> 修改字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">11.</span> <span class="nav-text"> 头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现侧边栏页面的圆角"><span class="nav-number">12.</span> <span class="nav-text"> 实现侧边栏页面的圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文按钮改弧度"><span class="nav-number">13.</span> <span class="nav-text"> 阅读全文按钮改弧度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景图片"><span class="nav-number">14.</span> <span class="nav-text"> 添加背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">15.</span> <span class="nav-text"> 添加背景音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#左边侧边栏添加新分类实际是利用-categories-的分类"><span class="nav-number">16.</span> <span class="nav-text"> 左边侧边栏添加新分类（实际是利用 categories 的分类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改网站的中英文字体"><span class="nav-number">17.</span> <span class="nav-text"> 更改网站的中英文字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览页面的时候显示当前浏览进度将-top-放在侧边栏中"><span class="nav-number">18.</span> <span class="nav-text"> 浏览页面的时候显示当前浏览进度，将 top 放在侧边栏中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章间分割线"><span class="nav-number">19.</span> <span class="nav-text"> 修改文章间分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-readmemd-文件"><span class="nav-number">20.</span> <span class="nav-text"> 添加 README.md 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块增加一键复制功能"><span class="nav-number">21.</span> <span class="nav-text"> 代码块增加一键复制功能</span></a></li></ol></div>
             
 
           </div>
@@ -782,7 +787,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">5.1k</span>
+    <span title="Site words total count">5.2k</span>
   
 </div>
 
