@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Zero&#39;s blog">
 <meta property="og:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-17T04:38:46.333Z">
+<meta property="og:updated_time" content="2019-01-17T05:39:38.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo之NexT主题设置">
 <meta name="twitter:description" content="从网上选择并学习一些美化 hexo-Next 主题的方法，记录如下">
@@ -329,7 +329,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-17T12:38:46+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-17T13:39:38+08:00">
                 2019-01-17
               </time>
             
@@ -384,7 +384,7 @@
                 </span>
                 
                 <span title="字数统计">
-                  2.4k
+                  2.8k
                 </span>
               
 
@@ -506,7 +506,8 @@
 <h2 id="添加背景音乐"><a class="markdownIt-Anchor" href="#添加背景音乐"></a> 添加背景音乐</h2>
 <p>首先从网易云官网选择喜欢的音乐，歌曲详情页点击生成外链播放器，得到代码示例如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=1325566210&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
-<p>打开 <code>/theme/next/layout/_macro/sidebar.swig</code> 文件，将外链链接放入你想要的位置，自己调试</p>
+<p>打开 <code>/theme/next/layout/_macro/sidebar.swig</code> 文件，将外链链接放入你想要的位置，自己调试，我的位置是在 toc 目录之上，可以防止挡到设置在右边的 top 按钮</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">+&lt;iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&amp;id=1325566210&amp;auto=1&amp;height=66"&gt;&lt;/iframe&gt;</span><br><span class="line"></span><br><span class="line">&#123;% if display_toc and toc(page.content).length &gt; 1 %&#125;</span><br><span class="line">&lt;!<span class="selector-tag">--noindex--</span>&gt;</span><br><span class="line">  &lt;section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"&gt;</span><br><span class="line">    &lt;div class="post-toc"&gt;</span><br><span class="line"></span><br><span class="line">      &#123;% if page.toc_number === undefined %&#125;</span><br><span class="line">        &#123;% set toc = toc(page.content, &#123; "class": "nav", list_number: theme.toc.number &#125;) %&#125;</span><br><span class="line">      &#123;% else %&#125;</span><br><span class="line">        &#123;% set toc = toc(page.content, &#123; "class": "nav", list_number: page.toc_number &#125;) %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">      &#123;% if toc.length &lt;= 1 %&#125;</span><br><span class="line">        &lt;p class="post-toc-empty"&gt;&#123;&#123; __('post.toc_empty') &#125;&#125;&lt;/p&gt;</span><br><span class="line">      &#123;% else %&#125;</span><br><span class="line">        &lt;div class="post-toc-content"&gt;&#123;&#123; toc &#125;&#125;&lt;/div&gt;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line">&lt;!--/noindex--&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="左边侧边栏添加新分类实际是利用-categories-的分类"><a class="markdownIt-Anchor" href="#左边侧边栏添加新分类实际是利用-categories-的分类"></a> 左边侧边栏添加新分类（实际是利用 categories 的分类）</h2>
 <p>模板添加分类 categories</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">+categories:</span><br></pre></td></tr></table></figure>
@@ -524,6 +525,14 @@
 <p>找到 <code>blog/themes/next/source/css/_variables/base.styl</code> 文件，做以下修改</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Font families.</span><br><span class="line">-$font-family-chinese      = "PingFang SC", "Microsoft YaHei"</span><br><span class="line">// 添加你想要的字体，用逗号间隔</span><br><span class="line">+$font-family-chinese      = -apple-system, BlinkMacSystemFont, "方正行黑简体", "PingFang SC", "Microsoft YaHei"</span><br></pre></td></tr></table></figure>
 <p><strong>注意：要想 NexT 主题的简体中文字体配置生效，站点配置文件中的 language 必须为 zh-Hans</strong></p>
+<h2 id="浏览页面的时候显示当前浏览进度将-top-放在侧边栏中"><a class="markdownIt-Anchor" href="#浏览页面的时候显示当前浏览进度将-top-放在侧边栏中"></a> 浏览页面的时候显示当前浏览进度，将 top 放在侧边栏中</h2>
+<p>打开主题配置文件，搜索关键字 <code>scrollpercent</code> ,把 false 改为 true</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># <span class="selector-tag">Scroll</span> <span class="selector-tag">percent</span> <span class="selector-tag">label</span> <span class="selector-tag">in</span> <span class="selector-tag">b2t</span> <span class="selector-tag">button</span></span><br><span class="line"><span class="selector-tag">scrollpercent</span>: <span class="selector-tag">true</span></span><br></pre></td></tr></table></figure>
+<p>如果想把 <code>top</code> 按钮放在侧边栏,打开主题配置文件 ,搜索关键字 <code>b2t</code> ,把 false 改为 true</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># <span class="selector-tag">Back</span> <span class="selector-tag">to</span> <span class="selector-tag">top</span> <span class="selector-tag">in</span> <span class="selector-tag">sidebar</span></span><br><span class="line"> <span class="selector-tag">b2t</span>: <span class="selector-tag">true</span></span><br><span class="line"></span><br><span class="line"> # <span class="selector-tag">Scroll</span> <span class="selector-tag">percent</span> <span class="selector-tag">label</span> <span class="selector-tag">in</span> <span class="selector-tag">b2t</span> <span class="selector-tag">button</span></span><br><span class="line"> <span class="selector-tag">scrollpercent</span>: <span class="selector-tag">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="修改文章间分割线"><a class="markdownIt-Anchor" href="#修改文章间分割线"></a> 修改文章间分割线</h2>
+<p>打开 <code>themes/next/source/css/_common/components/post/post-eof.styl</code>，修改 <code>.posts-expand</code> 内的内容替换为如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.posts-expand</span> &#123;</span><br><span class="line">  .post-eof &#123;</span><br><span class="line">    <span class="selector-tag">display</span>: <span class="selector-tag">block</span>;</span><br><span class="line">    margin: $post-eof-margin-top auto $post-eof-margin-bottom;  </span><br><span class="line">    width: 20%; //分割线长度</span><br><span class="line">    height: 3px; // 分割线高度</span><br><span class="line">    background: $grey;</span><br><span class="line">    <span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="代码块增加一键复制功能"><a class="markdownIt-Anchor" href="#代码块增加一键复制功能"></a> 代码块增加一键复制功能</h2>
 
       
@@ -722,6 +731,8 @@
         </div>
       </section>
 
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1325566210&auto=1&height=66"></iframe>
+      
       
       <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
@@ -732,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能-leancloud"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能-LeanCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能字数统计总字数统计阅读时长统计不蒜子计数"><span class="nav-number">8.</span> <span class="nav-text"> 实现统计功能：字数统计，总字数统计，阅读时长统计（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问人数总访问量设置文章阅读量不蒜子计数"><span class="nav-number">9.</span> <span class="nav-text"> 访问人数，总访问量设置，文章阅读量（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">10.</span> <span class="nav-text"> 修改字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">11.</span> <span class="nav-text"> 头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现侧边栏页面的圆角"><span class="nav-number">12.</span> <span class="nav-text"> 实现侧边栏页面的圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文按钮改弧度"><span class="nav-number">13.</span> <span class="nav-text"> 阅读全文按钮改弧度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景图片"><span class="nav-number">14.</span> <span class="nav-text"> 添加背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">15.</span> <span class="nav-text"> 添加背景音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#左边侧边栏添加新分类实际是利用-categories-的分类"><span class="nav-number">16.</span> <span class="nav-text"> 左边侧边栏添加新分类（实际是利用 categories 的分类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改网站的中英文字体"><span class="nav-number">17.</span> <span class="nav-text"> 更改网站的中英文字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块增加一键复制功能"><span class="nav-number">18.</span> <span class="nav-text"> 代码块增加一键复制功能</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-next-的子主题"><span class="nav-number">1.</span> <span class="nav-text"> 选择 NexT 的子主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交链接"><span class="nav-number">2.</span> <span class="nav-text"> 侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在右上角显示-fork-me-on-github"><span class="nav-number">3.</span> <span class="nav-text"> 在右上角显示 fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改内容区域宽度"><span class="nav-number">4.</span> <span class="nav-text"> 更改内容区域宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.</span> <span class="nav-text"> 修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义行内代码块样式"><span class="nav-number">6.</span> <span class="nav-text"> 自定义行内代码块样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量统计功能-leancloud"><span class="nav-number">7.</span> <span class="nav-text"> 添加文章阅读量统计功能-LeanCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能字数统计总字数统计阅读时长统计不蒜子计数"><span class="nav-number">8.</span> <span class="nav-text"> 实现统计功能：字数统计，总字数统计，阅读时长统计（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问人数总访问量设置文章阅读量不蒜子计数"><span class="nav-number">9.</span> <span class="nav-text"> 访问人数，总访问量设置，文章阅读量（不蒜子计数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改字体大小"><span class="nav-number">10.</span> <span class="nav-text"> 修改字体大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">11.</span> <span class="nav-text"> 头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现侧边栏页面的圆角"><span class="nav-number">12.</span> <span class="nav-text"> 实现侧边栏页面的圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文按钮改弧度"><span class="nav-number">13.</span> <span class="nav-text"> 阅读全文按钮改弧度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景图片"><span class="nav-number">14.</span> <span class="nav-text"> 添加背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加背景音乐"><span class="nav-number">15.</span> <span class="nav-text"> 添加背景音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#左边侧边栏添加新分类实际是利用-categories-的分类"><span class="nav-number">16.</span> <span class="nav-text"> 左边侧边栏添加新分类（实际是利用 categories 的分类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改网站的中英文字体"><span class="nav-number">17.</span> <span class="nav-text"> 更改网站的中英文字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览页面的时候显示当前浏览进度将-top-放在侧边栏中"><span class="nav-number">18.</span> <span class="nav-text"> 浏览页面的时候显示当前浏览进度，将 top 放在侧边栏中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章间分割线"><span class="nav-number">19.</span> <span class="nav-text"> 修改文章间分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块增加一键复制功能"><span class="nav-number">20.</span> <span class="nav-text"> 代码块增加一键复制功能</span></a></li></ol></div>
             
 
           </div>
@@ -748,7 +759,7 @@
           
         </div>
       
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1325566210&auto=1&height=66"></iframe>
+      
     </div>
   </aside>
 
@@ -771,7 +782,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">4.7k</span>
+    <span title="Site words total count">5.1k</span>
   
 </div>
 
