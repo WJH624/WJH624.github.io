@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wjh624.github.io/"/>
-  <updated>2019-05-22T14:59:02.935Z</updated>
+  <updated>2019-05-22T15:00:03.090Z</updated>
   <id>http://wjh624.github.io/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Typora</title>
-    <link href="http://wjh624.github.io/2019/01/17/Typora/"/>
-    <id>http://wjh624.github.io/2019/01/17/Typora/</id>
-    <published>2019-01-17T15:45:44.000Z</published>
-    <updated>2019-05-22T14:59:02.935Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="setting"><a class="markdownIt-Anchor" href="#setting"></a> Setting</h2><a id="more"></a><h3 id="添加主题"><a class="markdownIt-Anchor" href="#添加主题"></a> 添加主题</h3><p>一般使用<a href="https://theme.typora.io/theme/Solarized/" target="_blank" rel="noopener">Solarized</a></p><ol><li><a href="https://theme.typora.io/" target="_blank" rel="noopener">Downloads theme</a></li><li>文件-&gt;偏好设置-&gt;打开主题文件夹</li><li>解压缩，放进去，注意文件夹和一个css文件</li></ol><h3 id="修改字体"><a class="markdownIt-Anchor" href="#修改字体"></a> 修改字体</h3><p>在主题文件夹中，打开相应主题的css文件，将所有<code>font-family</code>属性原内容前加内容<code>方正行黑简体,</code></p><h2 id="install"><a class="markdownIt-Anchor" href="#install"></a> Install</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># or use</span></span><br><span class="line"><span class="comment"># sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE</span></span><br><span class="line">wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -</span><br><span class="line"></span><br><span class="line"><span class="comment"># add Typora's repository</span></span><br><span class="line">sudo add-apt-repository <span class="string">'deb https://typora.io/linux ./'</span></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment"># install typora</span></span><br><span class="line">sudo apt-get install typora</span><br></pre></td></tr></table></figure><h2 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h2><h5 id="无序列表-space"><a class="markdownIt-Anchor" href="#无序列表-space"></a> 无序列表：<code>- + space</code></h5><h5 id="有序列表num-space"><a class="markdownIt-Anchor" href="#有序列表num-space"></a> 有序列表：<code>num + . + space</code></h5><h5 id="任务列表-spacespacespace"><a class="markdownIt-Anchor" href="#任务列表-spacespacespace"></a> 任务列表：<code>-space[space]space</code></h5><h5 id="标题ctrl数字"><a class="markdownIt-Anchor" href="#标题ctrl数字"></a> 标题：<code>ctrl+数字</code></h5><h5 id="表格ctrlt"><a class="markdownIt-Anchor" href="#表格ctrlt"></a> 表格：<code>ctrl+t</code></h5><h5 id="生成目录toc按回车"><a class="markdownIt-Anchor" href="#生成目录toc按回车"></a> 生成目录：<code>[TOC]按回车</code></h5><h5 id="选中一整行ctrll"><a class="markdownIt-Anchor" href="#选中一整行ctrll"></a> 选中一整行：<code>ctrl+l</code></h5><h5 id="选中单词ctrld"><a class="markdownIt-Anchor" href="#选中单词ctrld"></a> 选中单词：<code>ctrl+d</code></h5><h5 id="选中相同格式的文字ctrle"><a class="markdownIt-Anchor" href="#选中相同格式的文字ctrle"></a> 选中相同格式的文字：<code>ctrl+e</code></h5><h5 id="跳转到文章开头ctrlhome"><a class="markdownIt-Anchor" href="#跳转到文章开头ctrlhome"></a> 跳转到文章开头：<code>ctrl+home</code></h5><h5 id="跳转到文章结尾ctrlend"><a class="markdownIt-Anchor" href="#跳转到文章结尾ctrlend"></a> 跳转到文章结尾：<code>ctrl+end</code></h5><h5 id="搜索ctrlf"><a class="markdownIt-Anchor" href="#搜索ctrlf"></a> 搜索：<code>ctrl+f</code></h5><h5 id="替换ctrlh"><a class="markdownIt-Anchor" href="#替换ctrlh"></a> 替换：<code>ctrl+h</code></h5><h5 id="引用-space-or-ctrl-shift-q"><a class="markdownIt-Anchor" href="#引用-space-or-ctrl-shift-q"></a> 引用：<code>&gt; + space or ctrl + shift + q</code></h5><h5 id="著重关键字ctrl-shift-反引号键tab-键上面那个键"><a class="markdownIt-Anchor" href="#著重关键字ctrl-shift-反引号键tab-键上面那个键"></a> 著重关键字：<code>ctrl + shift + 反引号键（tab 键上面那个键）</code></h5><h5 id="代码块ctrlaltf"><a class="markdownIt-Anchor" href="#代码块ctrlaltf"></a> 代码块：<code>ctrl+alt+f</code></h5><h5 id="加粗ctrlb"><a class="markdownIt-Anchor" href="#加粗ctrlb"></a> 加粗：<code>ctrl+b</code></h5><h5 id="倾斜ctrli"><a class="markdownIt-Anchor" href="#倾斜ctrli"></a> 倾斜：<code>ctrl+i</code></h5><h5 id="下划线ctrlu"><a class="markdownIt-Anchor" href="#下划线ctrlu"></a> 下划线：<code>ctrl+u</code></h5><h5 id="删除线altshift5"><a class="markdownIt-Anchor" href="#删除线altshift5"></a> 删除线：<code>alt+shift+5</code></h5><h5 id="插入图片直接拖动到指定位置即可-or-ctrlshifti"><a class="markdownIt-Anchor" href="#插入图片直接拖动到指定位置即可-or-ctrlshifti"></a> 插入图片：<code>直接拖动到指定位置即可 or ctrl+shift+i</code></h5><h5 id="插入链接ctrlk"><a class="markdownIt-Anchor" href="#插入链接ctrlk"></a> 插入链接：<code>ctrl+k</code></h5><h5 id="隐藏or显示侧边栏ctrlshiftl"><a class="markdownIt-Anchor" href="#隐藏or显示侧边栏ctrlshiftl"></a> 隐藏or显示侧边栏：<code>ctrl+shift+l</code></h5><h5 id="分割线-enter"><a class="markdownIt-Anchor" href="#分割线-enter"></a> 分割线：<code>--- + enter</code></h5><h5 id="定义脚注文字脚注"><a class="markdownIt-Anchor" href="#定义脚注文字脚注"></a> 定义脚注：<code>文字[^脚注]</code></h5><h5 id="高亮显示文字"><a class="markdownIt-Anchor" href="#高亮显示文字"></a> 高亮显示：<code>==文字==</code></h5><h5 id="单行换行shiftenter"><a class="markdownIt-Anchor" href="#单行换行shiftenter"></a> 单行换行：<code>shift+enter</code></h5><p>双行换行：<code>enter</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;setting&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#setting&quot;&gt;&lt;/a&gt; Setting&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="学会更好的使用工具" scheme="http://wjh624.github.io/categories/%E5%AD%A6%E4%BC%9A%E6%9B%B4%E5%A5%BD%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>安装 go 语言开发环境 (Ubuntu)</title>
